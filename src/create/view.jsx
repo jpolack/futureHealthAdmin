@@ -45,9 +45,16 @@ SelectFieldWrapper.propTypes = {
   label: PropTypes.string.isRequired,
 };
 
-export const Form = ({ handleSubmit, onSend }) => {
+export const Form = ({ handleSubmit, onSend, reset }) => {
   return (
-    <form onSubmit={handleSubmit(onSend)}>
+    <form
+      onSubmit={
+      handleSubmit((values) => {
+        onSend(values);
+        reset();
+      })
+    }
+    >
       <Grid spacing={16} container>
         <Grid xs={6} item>
           <Field
@@ -96,6 +103,7 @@ export const Form = ({ handleSubmit, onSend }) => {
 Form.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   onSend: PropTypes.func.isRequired,
+  reset: PropTypes.func.isRequired,
 };
 
 Form.defaultProps = {

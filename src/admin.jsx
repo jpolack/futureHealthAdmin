@@ -8,10 +8,13 @@ import AchievmentList from './list';
 const adminView = ({ theme }) => (
   <div style={{ padding: 30, backgroundColor: '#fff' }}>
     <Typography variant="display1" color="primary">
-      Admin
+      Manage achievments
+    </Typography>
+    <Typography variant="headline" color="secondary">
+      Write a new achievment
     </Typography>
     <Create />
-    <Typography style={{ marginTop: 20 }} variant="display1" color="primary">
+    <Typography style={{ marginTop: 20 }} variant="headline" color="secondary">
       Achievments
     </Typography>
     <AchievmentList />
