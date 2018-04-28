@@ -11,6 +11,9 @@ const adminView = ({ theme }) => (
       Admin
     </Typography>
     <Create />
+    <Typography style={{ marginTop: 20 }} variant="display1" color="primary">
+      Achievments
+    </Typography>
     <AchievmentList />
   </div>
 );
