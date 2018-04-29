@@ -1,16 +1,21 @@
 import React from 'react';
 import Typography from 'material-ui/Typography';
+import { withTheme } from 'material-ui/styles';
 
 import Create from './create';
 import AchievmentList from './list';
 
-const adminView = () => (
+
+const adminView = ({ theme }) => (
   <div style={{ padding: 30 }}>
     <Typography variant="display3" color="primary">
-      Future Health
+      Future
+    </Typography>
+    <Typography variant="display3" style={{ paddingLeft: 40, color: theme.palette.primary.light }}>
+      Health
     </Typography>
     <Typography variant="headline" color="secondary">
-      Write a new achievement
+      Add a new achievement
     </Typography>
     <Create />
     <Typography style={{ marginTop: 20 }} variant="headline" color="secondary">
@@ -20,4 +25,4 @@ const adminView = () => (
   </div>
 );
 
-export default adminView;
+export default withTheme()(adminView);
