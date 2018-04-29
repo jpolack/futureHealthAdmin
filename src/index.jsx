@@ -37,6 +37,9 @@ const theme = createMuiTheme({
       light: '#999999',
     },
   },
+  typography: {
+    fontFamily: "'Montserrat', sans-serif",
+  },
 });
 
 const IndexComponent = (

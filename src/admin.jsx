@@ -1,14 +1,13 @@
 import React from 'react';
 import Typography from 'material-ui/Typography';
-import { withTheme } from 'material-ui/styles';
 
 import Create from './create';
 import AchievmentList from './list';
 
-const adminView = ({ theme }) => (
+const adminView = () => (
   <div style={{ padding: 30, backgroundColor: '#fff' }}>
-    <Typography variant="display1" color="primary">
-      Manage achievments
+    <Typography variant="display3" color="primary">
+      Future Health
     </Typography>
     <Typography variant="headline" color="secondary">
       Write a new achievment
@@ -21,4 +20,4 @@ const adminView = ({ theme }) => (
   </div>
 );
 
-export default withTheme()(adminView);
+export default adminView;
