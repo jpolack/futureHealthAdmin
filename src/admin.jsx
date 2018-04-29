@@ -5,7 +5,7 @@ import Create from './create';
 import AchievmentList from './list';
 
 const adminView = () => (
-  <div style={{ padding: 30, backgroundColor: '#fff' }}>
+  <div style={{ padding: 30 }}>
     <Typography variant="display3" color="primary">
       Future Health
     </Typography>

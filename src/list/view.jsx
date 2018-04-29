@@ -16,7 +16,7 @@ const ListView = ({ achievments }) => (
           {achiev.description}
         </Typography>
         <Typography>
-          {achiev.type}:&nbsp;{achiev.value}&nbsp;{achiev.unit}
+          <i className="material-icons">directions_run</i>:&nbsp;{achiev.value}&nbsp;{achiev.unit}
         </Typography>
       </Paper>
     ))}
