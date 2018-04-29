@@ -10,11 +10,11 @@ const adminView = () => (
       Future Health
     </Typography>
     <Typography variant="headline" color="secondary">
-      Write a new achievment
+      Write a new achievement
     </Typography>
     <Create />
     <Typography style={{ marginTop: 20 }} variant="headline" color="secondary">
-      Achievments
+      Achievements
     </Typography>
     <AchievmentList />
   </div>
