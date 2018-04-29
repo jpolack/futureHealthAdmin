@@ -7,16 +7,19 @@ import Typography from 'material-ui/Typography';
 
 const ListView = ({ achievments }) => (
   <div >
+    <Typography>
+      Total points to achieve: {achievments.reduce((num, achiev) => num + achiev.points, 0)}
+    </Typography>
     {achievments.reverse().map(achiev => (
       <Paper key={achiev.id} style={{ padding: 20, marginTop: 20, marginBottom: 20 }}>
-        <Typography variant="display1">
+        <Typography variant="headline">
           {achiev.name}&nbsp;—&nbsp;{achiev.points}&nbsp;Points
         </Typography>
         <Typography>
           {achiev.description}
         </Typography>
         <Typography>
-          <i className="material-icons">directions_run</i>:&nbsp;{achiev.value}&nbsp;{achiev.unit}
+          <i className="material-icons">directions_run</i>&nbsp;{achiev.value}&nbsp;{achiev.unit}
         </Typography>
       </Paper>
     ))}
