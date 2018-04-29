@@ -53,7 +53,7 @@ SelectFieldWrapper.propTypes = {
   label: PropTypes.string.isRequired,
 };
 
-export const Form = ({ handleSubmit, onSend, reset, pristine }) => {
+export const Form = ({ handleSubmit, onSend, reset, pristine, invalid }) => {
   return (
     <form
       onSubmit={
@@ -107,7 +107,7 @@ export const Form = ({ handleSubmit, onSend, reset, pristine }) => {
           </Field>
         </Grid>
         <Grid xs={12} item>
-          <Button disabled={pristine} variant="raised" color="secondary" type="submit">Send</Button>
+          <Button disabled={pristine || invalid} variant="raised" color="secondary" type="submit">Send</Button>
         </Grid>
       </Grid>
     </form>
@@ -119,6 +119,7 @@ Form.propTypes = {
   onSend: PropTypes.func.isRequired,
   reset: PropTypes.func.isRequired,
   pristine: PropTypes.bool.isRequired,
+  invalid: PropTypes.bool.isRequired,
 };
 
 Form.defaultProps = {
